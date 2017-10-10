@@ -35,6 +35,7 @@ BREAKING CHANGES:
 - rpc/lib/types: RPCResponse is no longer a pointer; WSRPCConnection interface has been modified
 - rpc/client: WaitForOneEvent takes an EventsClient instead of types.EventSwitch
 - rpc/client: Add/RemoveListenerForEvent are now Subscribe/Unsubscribe
+- the files usually found in `~/.tendermint` (`config.toml`, `genesis.json`, and `priv_validator.json`) are now in `~/.tendermint/config`. The `$TMHOME/data/` directory remains unchanged.
 
 FEATURES:
 - rpc: new `/unsubscribe_all` WebSocket RPC endpoint
@@ -42,7 +43,7 @@ FEATURES:
 
 IMPROVEMENTS:
 - New asynchronous events system using `tmlibs/pubsub`
-- logging: Various small improvements 
+- logging: Various small improvements
 - consensus: Graceful shutdown when app crashes
 - tests: Fix various non-deterministic errors
 - p2p: more defensive programming
